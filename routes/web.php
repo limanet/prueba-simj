@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Rutas para el login
+Route::view( 'login', 'auth.login' );
+Route::post( 'login', [ \App\Http\Controllers\loginController::class, 'login' ] )->name( 'login' );
+
+Route::get( '/', function () {
+    return view( 'welcome' );
+} )->middleware( 'auth' )->name( 'index' );
