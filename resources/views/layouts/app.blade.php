@@ -1,3 +1,6 @@
+@props( [
+    'user'
+] )
 <!doctype html>
 <html lang="es">
 <head>
@@ -28,6 +31,10 @@
             </div>
         </header>
 
+        <section class="app-menu__name">
+            {{ $user->name }}
+        </section>
+
         <section class="app-menu__logout">
             <a href="{{ route( 'logout' ) }}">
                 <span>Salir</span> <i class="fa-solid fa-arrow-right-from-bracket"></i>
@@ -38,7 +45,8 @@
             <x-menu-item
                 icon="fa-regular fa-user"
                 title="Usuarios"
-                route="#"
+                route="{{ route( 'users.index' ) }}"
+                :active="Route::is( 'users*' )"
             ></x-menu-item>
             <x-menu-item
                 icon="fa-regular fa-calendar"
@@ -49,9 +57,14 @@
     </aside>
 
     <main class="app-content container-fluid">
+        <header class="app-content__section">
+            {{ $section }}
+        </header>
+
         {{ $slot }}
     </main>
 
+    @vite( [ 'resources/js/app.js' ] )
     @stack( 'js' )
 </body>
 </html>

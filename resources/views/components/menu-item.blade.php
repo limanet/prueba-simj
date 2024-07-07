@@ -4,9 +4,11 @@
     'route',
     'active' => false,
 ] )
-<div class="app-menu_item">
+<div class="app-menu__item">
     <a href="{{ $route }}" @class( [ 'active' => $active ] )>
-        <i class="{{ $icon }}"></i>
-        <span>{{ $title }}</span>
+        <div class="icon">
+            <i class="{{ $icon }}"></i>
+        </div>
+        <div>{{ $title }}</div>
     </a>
 </div>
