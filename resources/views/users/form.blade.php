@@ -3,7 +3,7 @@
     <x-slot name="section">Usuarios - {{ ( isset( $user_id ) ) ? 'Editar' : 'Nuevo' }} usuario</x-slot>
 
     <section class="users-form py-3 col-6">
-        <form method="post" action="">
+        <form method="post" action="{{ url()->current() }}">
             @csrf
 
             @isset( $user_id )

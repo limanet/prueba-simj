@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer( 'year' );
             $table->string( 'name' );
             $table->string( 'color' );
+            $table->boolean( 'recurrent' )->default( false );
             $table->timestamps();
         });
     }
