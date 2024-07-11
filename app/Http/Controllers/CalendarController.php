@@ -29,7 +29,7 @@ class CalendarController extends Controller
      */
     public function FestivosList()
     {
-        $festivos = Calendar::paginate( 25 );
+        $festivos = Calendar::orderBy( 'year', 'ASC' )->orderBy( 'month', 'ASC' )->orderBy( 'day', 'ASC' )->paginate(25);
 
 
         return view( 'calendar.list', [

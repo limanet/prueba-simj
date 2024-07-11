@@ -51,7 +51,8 @@
             <x-menu-item
                 icon="fa-regular fa-calendar"
                 title="Festivos"
-                route="#"
+                route="{{ route( 'calendar.index' ) }}"
+                :active="Route::is( 'calendar*' )"
             ></x-menu-item>
         </div>
     </aside>
