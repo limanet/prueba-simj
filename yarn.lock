@@ -354,6 +354,11 @@ is-number@^7.0.0:
   resolved "https://registry.yarnpkg.com/is-number/-/is-number-7.0.0.tgz#7535345b896734d5f80c4d06c50955527a14f12b"
   integrity sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==
 
+js-year-calendar@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/js-year-calendar/-/js-year-calendar-2.0.0.tgz#60c834284f863070ff0abb1aba0f46a7c56e0717"
+  integrity sha512-Q1cB25/9fQkl/FefzrfwMBGbDSoF5nCHEj3LGHJh2BdXdFUJf1asFn6A7jnMrdo+c4QpDoc0HEcvhu+SjmGOaw==
+
 laravel-vite-plugin@^1.0:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/laravel-vite-plugin/-/laravel-vite-plugin-1.0.4.tgz#b9a516ed212aae55c19369984dc5d2f09276560c"
