@@ -115,4 +115,12 @@ class CalendarController extends Controller
         Calendar::where( 'id_calendar', $request->id_festivo )->delete();
         return redirect()->back();
     }
+
+
+    public function ajaxCalendar( Request $request )
+    {
+        $calendar = Calendar::get();
+
+        return response()->json( $calendar );
+    }
 }

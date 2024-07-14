@@ -33,3 +33,5 @@ Route::prefix( 'calendar' )->middleware( 'auth' )->group( function () {
     Route::post( 'festivos/{id_festivo}/edit', [ \App\Http\Controllers\CalendarController::class, 'storeFestivo' ] )->name( 'calendar.festivos.edit.store' );
     Route::get( 'festivos/{id_festivo}/delete', [ \App\Http\Controllers\CalendarController::class, 'deleteFestivo' ] )->name( 'calendar.festivos.delete' );
 });
+
+Route::get( 'ajax/calendar', [ \App\Http\Controllers\CalendarController::class, 'ajaxCalendar' ] );

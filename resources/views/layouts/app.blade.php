@@ -47,7 +47,8 @@
                 title="Usuarios"
                 route="{{ route( 'users.index' ) }}"
                 :active="Route::is( 'users*' )"
-            ></x-menu-item>
+            >
+            </x-menu-item>
             <x-menu-item
                 icon="fa-regular fa-calendar"
                 title="Festivos"
